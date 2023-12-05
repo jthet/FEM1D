@@ -1,6 +1,11 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+'''
+Jackson Thetford
+Final Project for COE 352: Advanced Scientific Computing @ The University of Texas at Austin
+'''
+
 def f(x, t):
     """
     Function to represent the original problem function.
