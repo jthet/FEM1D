@@ -107,7 +107,7 @@ We can also see how the number of nodes, N, affects the solution. Here is a gif 
   <img src="https://github.com/jthet/FEM1D/blob/main/resources/solution_evolution_node_change_FE.gif" alt="Your Image Description">
 </p>
 
-As you can see, the number of nodes greatly affects the accuracy of our numerical method, with the number of nodes being directly inversly porportional to the error between the the analytical and numerical plots. 
+As you can see, the number of nodes greatly affects the accuracy of our numerical method, with the number of nodes  inversly porportional to the error between the the analytical and numerical plots. 
 
 ### Question 3 -  Backward Euler
 _Solve the same problem with the same time-steps using an implicit backward Euler. What happens as the time-step is equal to or greater than the spatial step size? Explain why._
