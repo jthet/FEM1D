@@ -34,14 +34,34 @@ Follow the on-screen prompts to enter the number of nodes, the number of timeste
 The program computes and plots the numerical solution against the analytical solution at the specified timestep, providing a visual comparison.
 
 ## Project Answers
-
-(2) (50pts) Solve first by using a forward Euler time derivative discretization
+### Question 2
+Solve first by using a forward Euler time derivative discretization
 with a time-step of Δ𝑡 = 1/551 . Plot the results at the final time. Increase the
 time-step until you find the instability. What dt does this occur at? How does
 the solution change as N decreases?
 
-Plot:
+Here are the final results, plotted at the final time, using the Forward Euler method with 551 time steps and 11 nodes.
 
 
-Gif:
+<p align="center">
+  <img src="https://github.com/jthet/FEM1D/blob/main/resources/FE_11n_551t.png" alt="Your Image Description">
+</p>
+
+Here is a gif that shows many different time steps:
+
+<p align="center">
+  <img src="https://github.com/jthet/FEM1D/blob/main/resources/solution_evolution_0_600_free.gif" alt="Your Image Description">
+</p>
+
+Slowed down and focusing on the interval of 265 -  285 time steps, we can see that the FE method gains stability around a time step size of 1/278, or 278 time steps:
+
+<p align="center">
+  <img src="https://github.com/jthet/FEM1D/blob/main/resources/solution_evolution_265_285_free.gif" alt="Your Image Description">
+</p>
+
+One a fixed interval, the stability looks like this:
+
+<p align="center">
+  <img src="https://github.com/jthet/FEM1D/blob/main/resources/solution_evolution_265_285_fixed.gif" alt="Your Image Description">
+</p>
 
