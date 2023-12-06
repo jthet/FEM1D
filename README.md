@@ -34,11 +34,8 @@ Follow the on-screen prompts to enter the number of nodes, the number of timeste
 The program computes and plots the numerical solution against the analytical solution at the specified timestep, providing a visual comparison.
 
 ## Project Answers
-### Question 2
-Solve first by using a forward Euler time derivative discretization
-with a time-step of Δ𝑡 = 1/551 . Plot the results at the final time. Increase the
-time-step until you find the instability. What dt does this occur at? How does
-the solution change as N decreases?
+### Question 2 - Forward Euler
+Solve first by using a forward Euler time derivative discretization with a time-step of Δ𝑡 = 1/551 . Plot the results at the final time. Increase the time-step until you find the instability. What dt does this occur at? How does the solution change as N decreases?
 
 Here are the final results, plotted at the final time, using the Forward Euler method with 551 time steps and 11 nodes.
 
@@ -65,3 +62,33 @@ One a fixed interval, the stability looks like this:
   <img src="https://github.com/jthet/FEM1D/blob/main/resources/solution_evolution_265_285_fixed.gif" alt="Your Image Description">
 </p>
 
+We can also see how the number of nodes, N, affects the solution. Here is a gif that shows how the plot looks as N increases from 2 to 11.
+
+<p align="center">
+  <img src="https://github.com/jthet/FEM1D/blob/main/resources/solution_evolution_node_change_FE.gif" alt="Your Image Description">
+</p>
+
+As you can see, the number of nodes greatly affects the accuracy of our numerical method, with the number of nodes being directly inversly porportional to the error between the the analytical and numerical plots. 
+
+### Question 3 -  Backward Euler
+Solve the same problem with the same time-steps using an implicit backward Euler. What happens as the time-step is equal to or greater than the spatial step size? Explain why.
+
+Here are the final results, plotted at the final time, using the Backward Euler method with 551 time steps and 11 nodes.
+
+<p align="center">
+  <img src="https://github.com/jthet/FEM1D/blob/main/resources/BE_11n_551t.png" alt="Your Image Description">
+</p>
+
+We can also see how the number of nodes, N, affects the solution. Here is a gif that shows how the plot looks as N increases from 2 to 11.
+
+<p align="center">
+  <img src="https://github.com/jthet/FEM1D/blob/main/resources/solution_evolution_node_change_BE.gif" alt="Your Image Description">
+</p>
+
+Lastly, here is a picture of a plot when the time-step is greater than the spatial step size
+<p align="center">
+  <img src="https://github.com/jthet/FEM1D/blob/main/resources/BE_smallSpace_bigTime.png" alt="Your Image Description">
+</p>
+
+
+When the time-step Δt is large, specifically when it's comparable to or larger than the spatial step size, the solution's accuracy can degrade. This happens because the backward Euler method, while stable, is only first-order accurate in time, and large time-steps can lead to significant temporal discretization errors. As Δt increases, you we can observe that that the solution becomes less responsive to rapid changes in the solution, which is a characteristic of the method's low temporal accuracy. 
