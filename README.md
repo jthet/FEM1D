@@ -33,11 +33,11 @@ Follow the on-screen prompts to enter the number of nodes, the number of timeste
 ## Output
 The program computes and plots the numerical solution against the analytical solution at the specified timestep, providing a visual comparison.
 
-## Project Answers
+# Analysis
 
 #### Note: There is sometimes an issue with the gifs where they won't replay. Please click on them and it will take you to another tab to view them. 
 
-Consider the heat transfer problem
+We are focusing on teh the heat transfer problem
 
 $$
 u_t - u_{xx} = f(x, t), \quad (x, t) \in (0, 1) \times (0, 1)
