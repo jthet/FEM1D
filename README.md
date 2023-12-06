@@ -74,13 +74,13 @@ The Forward Euler method has conditional temporal stability and must abide by th
 
 
 Here are the final results, plotted at the final time, using the Forward Euler method with 551 time steps and 11 nodes.
-
+**Image:**
 
 <p align="center">
   <img src="https://github.com/jthet/FEM1D/blob/main/resources/FE_11n_551t.png" alt="Your Image Description">
 </p>
 
-Here is a gif that shows many different time steps:
+Here is a **gif** that shows many different time steps:
 
 <p align="center">
   <img src="https://github.com/jthet/FEM1D/blob/main/resources/solution_evolution_0_600_free.gif" alt="Your Image Description">
@@ -89,17 +89,23 @@ Here is a gif that shows many different time steps:
 You might notice that the convergence of stability is very rapid, but happens at around a timestep of 1/280. We can zoom in and analyze it further. 
 Slowed down and focusing on the interval of 265 -  285 time steps, we can see that the FE method gains stability around a time step size of dt = 1/278, or 278 time steps over our [0, 1] second interval:
 
+**gif:**
+
 <p align="center">
   <img src="https://github.com/jthet/FEM1D/blob/main/resources/solution_evolution_265_285_free.gif" alt="Your Image Description">
 </p>
 
 One a fixed interval, the stability looks like this:
 
+**gif:**
+
 <p align="center">
   <img src="https://github.com/jthet/FEM1D/blob/main/resources/solution_evolution_265_285_fixed.gif" alt="Your Image Description">
 </p>
 
 We can also see how the number of nodes, N, affects the solution. Here is a gif that shows how the plot looks as N increases from 2 to 11.
+
+**gif:**
 
 <p align="center">
   <img src="https://github.com/jthet/FEM1D/blob/main/resources/solution_evolution_node_change_FE.gif" alt="Your Image Description">
@@ -114,15 +120,21 @@ The Backward Euler method offers unconditionally stable temporal characteristics
 
 Here are the final results, plotted at the final time, using the Backward Euler method with 551 time steps and 11 nodes.
 
+**Image:**
+
 <p align="center">
   <img src="https://github.com/jthet/FEM1D/blob/main/resources/BE_11n_551t.png" alt="Your Image Description">
 </p>
 
 We can also see how the number of nodes, N, affects the solution. Here is a gif that shows how the plot looks as N increases from 2 to 11.
 
+**gif:**
+
 <p align="center">
   <img src="https://github.com/jthet/FEM1D/blob/main/resources/solution_evolution_node_change_BE.gif" alt="Your Image Description">
 </p>
+
+**Image:**
 
 Lastly, here is a picture of a plot when the time-step is greater than the spatial step size
 <p align="center">
