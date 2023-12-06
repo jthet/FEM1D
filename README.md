@@ -67,9 +67,6 @@ $$
 
 
 
-
-
-
 ### Question 2 - Forward Euler
 _Solve first by using a forward Euler time derivative discretization with a time-step of Δ𝑡 = 1/551 . Plot the results at the final time. Increase the time-step until you find the instability. What dt does this occur at? How does the solution change as N decreases?_
 
@@ -89,6 +86,7 @@ Here is a gif that shows many different time steps:
   <img src="https://github.com/jthet/FEM1D/blob/main/resources/solution_evolution_0_600_free.gif" alt="Your Image Description">
 </p>
 
+You might notice that the convergence of stability is very rapid, but happens at around a timestep of 1/280. We can zoom in and analyze it further. 
 Slowed down and focusing on the interval of 265 -  285 time steps, we can see that the FE method gains stability around a time step size of dt = 1/278, or 278 time steps over our [0, 1] second interval:
 
 <p align="center">
