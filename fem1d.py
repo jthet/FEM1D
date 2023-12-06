@@ -139,7 +139,7 @@ def get_matricies(N, nnElem, nt, h, iee):
                 M[global_node1][global_node2] += mlocal[l][m]
     return K, M, F
 
-def initialize_system( N, nnElem, nt, iee):
+def initialize_system( N, nnElem, nt, h, iee):
     """
     Initialize system matrices.
 
@@ -226,7 +226,7 @@ def line():
     """
     print('-'*50)
 
-def plot(u, N, timestep, method):
+def plot(u, N, timestep, nt, method):
     """
     Plot the analytical and numerical solutions.
 
@@ -256,7 +256,6 @@ def welcome():
     print("\nThis code uses the Galerkin method with 1D Lagrange basis functions and 2nd order Gaussian Quadrature")
 
 def main():
-    global h, nnElem, nt
     nnElem = 2 # Nodes per element
     t = 1 # initial time
     xl = 0
@@ -266,9 +265,8 @@ def main():
     line(); print("Set up your system . . ."); line()
 
     N, nt, method = get_user_input()
-    # Ne, h, x, iee = conn_map(N, xl, xr)
     h, x, iee = create_mesh(N, xl, xr)
-    K, M, F = initialize_system( N, nnElem, nt, iee)
+    K, M, F = initialize_system( N, nnElem, nt, h, iee)
     u = solve_system(N, nt, x, M, K, F, iee, method)
 
     timestep_to_plot = nt # using the last time step for plot
@@ -280,7 +278,7 @@ def main():
     # print('F', F)
     # print('u', u)
     
-    plot(u, N, timestep_to_plot, method)
+    plot(u, N, timestep_to_plot, nt, method)
 
 if __name__ == "__main__":
     main()
